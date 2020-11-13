@@ -5,7 +5,7 @@
 <body>
 <?php
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'chanika.mysql.database.azure.com', 'it63070029@chanika', 'PPARn012010', 'itf_lab', 3306);
+mysqli_real_connect($conn, 'chanika.mysql.database.azure.com', 'it63070029@chanika', 'PPARn012010', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
