@@ -11,9 +11,8 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['Name'];
 $comment = $_POST['Comment'];
 $link = $_POST['Link'];
-$id = $_POST['ID'];
 
-$sql = "INSERT INTO guestbook (Name , Comment , Link, ID) VALUES ('$name', '$comment', '$link','$id')";
+$sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
 
 
 if (mysqli_query($conn, $sql)) {
