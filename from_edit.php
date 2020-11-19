@@ -7,26 +7,11 @@ $id = $_GET['id'];
 </head>
 <style>
   body{
-    background-color: rgb(136, 95, 160);
+    background-color:#85B2BB;
   }
-  .form-style-5{
-  max-width: 500px;
-  margin: 45px auto;
-  padding: 20px;
-  background: #462b5c;
-  border-radius: 12px;
-  color: white;
-  font-family: fantasy;
-  font-size: 20px;
-}
-.center1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15px}
 </style>
 <body>
-  <h1 class="center1" style="color:rgb(236, 226, 207); margin-top: 45px;">
+  <h1 class="center1" style="color:#FF91A4; margin-top: 45px;">
     -EDIT FORM-
   </h1>
   <form class="form-style-5" action = "edit.php" method = "post" id="EditForm" >
