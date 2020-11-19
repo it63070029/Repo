@@ -1,3 +1,4 @@
+<from action="show.php" name="insert" method="post">
 <?php
 
 $conn = mysqli_init();
