@@ -31,7 +31,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM guestbook002');
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table class="center1" width="900" style="margin-left:auto;margin-right:auto;margin-top: 20px;">
   <tr>
