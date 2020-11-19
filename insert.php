@@ -1,4 +1,3 @@
-<from action="show.php" name="insert" method="post">
 <?php
 
 $conn = mysqli_init();
@@ -12,13 +11,15 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['Name'];
 $comment = $_POST['Comment'];
 $link = $_POST['Link'];
+$id = $_POST['id'];
 
-
-$sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
+//$sql = "UPDATE guestbook002 SET Name = $name, Comment = $comment, Link = $link WHERE id = $id;";//
+$sql = "UPDATE guestbook002 SET Name = '$name', Comment = '$comment', Link = '$link' WHERE id = $id;";
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    header('location: show.php');
+    
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
