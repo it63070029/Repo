@@ -14,9 +14,10 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table width="600" border="1">
   <tr>
-    <th width="100" style="background-color:#d2e7d1;"> <div align="center">Name</div></th>
-    <th width="350" style="background-color:#ddecdc;"> <div align="center">Comment </div></th>
-    <th width="150" style="background-color:#f1f8f1;"> <div align="center">Link </div></th>
+    <th> <center>Name</center></th>
+    <th> <center>Comment</center></th>
+    <th><center>Link</center></th>
+    <th> <center>Action<center></th>
   </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
@@ -26,6 +27,8 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
+    <td><center><button type = "submit" class ="btn btn-light"><a href="delet.php?id=<?=$result['id'];?">Delete</a></button></center></td>
+                <button type = "submit" class ="btn btn-light"><a href="edit.php?id=<?=$result['id'];?">Edit</button></center></td>
   </tr>
 <?php
 }
@@ -34,5 +37,6 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
+<center><button type="submit" class="btn btn-primary" onclick="window.location= 'from.html'">Add</button></center>
 </body>
 </html>
