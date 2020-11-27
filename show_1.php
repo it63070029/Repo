@@ -26,7 +26,7 @@
 <body>
 <?php
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'chanika.mysql.database.azure.com', 'it63070029@chanika', 'chanika00_', 'itflab', 3306);
+mysqli_real_connect($conn, 'chanika.mysql.database.azure.com', 'it63070029@chanika', 'chanika00_', 'exam', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
@@ -44,12 +44,13 @@ $res = mysqli_query($conn, 'SELECT * FROM NewTable');
 <?php
 while($Result = mysqli_fetch_array($res))
 {
+  $total=$Result['price']*$Result['amount']
 ?>
   <tr>
     <td style="background-color: #f7fafa"><?php echo $Result['product'];?></div></td>
     <td style="background-color: #f7fafa"><?php echo $Result['price'];?></td>
     <td style="background-color: #f7fafa"><?php echo $Result['amount'];?></td>
-    <td style="background-color: #f7fafa"><?php echo $Result['total'];?></td>
+    <td style="background-color: #f7fafa"><?php echo $total;?></td>
     <td style="background-color: #f7fafa"><div align="center">
         <button type="submit" style="padding: 5%; background-color: tomato; border-width: 0cm; color:white; border-radius: 6px;"><a href="delete.php?id=<?=$Result['id'];?>" style="color: white; text-decoration: none;"><strong>Delete</strong></a></button>
         
