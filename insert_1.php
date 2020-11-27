@@ -11,7 +11,7 @@ if (mysqli_connect_errno($conn))
 $product = $_POST['product'];
 $price = $_POST['price'];
 $amount = $_POST['amount'];
-$total = $_POST['(price)*(amount)=total'];
+$total = $_POST['total'];
 
 $sql = "INSERT INTO guestbook (product , price , amount , total) VALUES ('$product', '$price', '$amount' , '$total')";
 
