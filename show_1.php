@@ -49,7 +49,7 @@ while($Result = mysqli_fetch_array($res))
     <td style="background-color: #f7fafa"><?php echo $Result['product'];?></div></td>
     <td style="background-color: #f7fafa"><?php echo $Result['price'];?></td>
     <td style="background-color: #f7fafa"><?php echo $Result['amount'];?></td>
-    <td style="background-color: #f7fafa"><?php echo $Result['price*amount'];?></td>
+    <td style="background-color: #f7fafa"><?php echo $Result['total'];?></td>
     <td style="background-color: #f7fafa"><div align="center">
         <button type="submit" style="padding: 5%; background-color: tomato; border-width: 0cm; color:white; border-radius: 6px;"><a href="delete.php?id=<?=$Result['id'];?>" style="color: white; text-decoration: none;"><strong>Delete</strong></a></button>
         
